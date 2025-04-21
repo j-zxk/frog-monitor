@@ -11,7 +11,7 @@ export * from './load';
 function webInit(options: InitOptions = {}): void {
   if (!('XMLHttpRequest' in _global) || options.disabled) return;
   initOptions(options);
-  setupReplace;
+  setupReplace();
 }
 
 function init(options: InitOptions = {}): void {

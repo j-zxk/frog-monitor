@@ -1,0 +1,30 @@
+{
+  "name": "frog-monitor-web",
+  "version": "1.0.0",
+  "description": "呱呱--前端稳定性监控 Web 监控",
+  "author": "zxkxyz <522569695@qq.com>",
+  "homepage": "https://github.com/j-zxk/frog-monitor#readme",
+  "license": "ISC",
+  "main": "dist/index.global.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "unpkg": "dist/index.global.js",
+  "files": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j-zxk/frog-monitor.git"
+  },
+  "scripts": {
+    "build": "encode-bundle src/index.ts --format iife,cjs,esm --dts --global-name frogMonitor",
+    "clean": "rimraf dist node_modules"
+  },
+  "bugs": {
+    "url": "https://github.com/j-zxk/frog-monitor/issues"
+  },
+  "devDependencies": {
+    "encode-bundle": "^1.4.1"
+  },
+  "dependencies": {
+    "frog-monitor-browser": "workspace:^"
+  }
+}

@@ -51,6 +51,28 @@ importers:
         specifier: ^9.1.1
         version: 9.1.1(typescript@5.8.3)
 
+  packages/browser: {}
+
+  packages/core: {}
+
+  packages/shared: {}
+
+  packages/types: {}
+
+  packages/utils: {}
+
+  packages/web:
+    dependencies:
+      frog-monitor-browser:
+        specifier: workspace:^
+        version: link:../browser
+    devDependencies:
+      encode-bundle:
+        specifier: ^1.4.1
+        version: 1.4.1(@swc/core@1.11.21)(postcss@8.5.3)(ts-node@9.1.1(typescript@5.8.3))(typescript@5.8.3)
+
+  packages/web-performance: {}
+
 packages:
 
   '@ampproject/remapping@2.3.0':
